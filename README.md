@@ -2,4 +2,4 @@
 the config file for tmux
 
 ## howto
-download and rename _tmux.config to ~/.tmux.conf
+download and rename _tmux.conf to ~/.tmux.conf
