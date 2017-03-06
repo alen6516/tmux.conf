@@ -9,7 +9,7 @@ download the file and move to ~/.tmux.conf
 work.sh
 
 ## command
-### trigger key is changed to <ESC>
+### trigger key is changed to ESC
 ### c :create a new window
 ### n :switch to the next window
 ### p :switch to the previous window
