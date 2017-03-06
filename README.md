@@ -3,10 +3,13 @@ the config file for tmux
 
 ## installation
 sudo apt-get install tmux
-download and rename _tmux.conf to ~/.tmux.conf
+download the file and move to ~/.tmux.conf
+
+## script
+work.sh
 
 ## command
-### trigger key is changed to Ctrl-a
+### trigger key is changed to Ctrl-q
 ### c :create a new window
 ### n :switch to the next window
 ### p :switch to the previous window
