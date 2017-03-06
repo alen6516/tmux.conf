@@ -1,4 +1,4 @@
-# tmux.config_example
+# .tmux.conf
 the config file for tmux
 
 ## installation
