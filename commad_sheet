@@ -1,3 +1,5 @@
+# source: https://gist.github.com/MohamedAlaa/2961058
+
 # Tmux 快捷鍵 & 速查表
 
 啟動新會話：
@@ -12,23 +14,23 @@
 
     tmux ls
 
-<a name="killSessions"></a>關閉會話：
+關閉會話：
 
     tmux kill-session -t 會話名
 
-<a name="killAllSessions"></a>關閉所有會話：
+關閉所有會話：
 
     tmux ls | grep : | cut -d. -f1 | awk '{print substr($1, 0, length($1)-1)}' | xargs kill
 
-# 在 Tmux 中，按下 Tmux 前綴 `ctrl+b`，然後：
+# 在 Tmux 中，按下 Tmux 前綴，然後：
 
 ## 會話
 
-    :new<回車> 啟動新會話
+    :new<Enter> 啟動新會話
     s 列出所有會話
     $ 重命名當前會話
 
-## <a name="WindowsTabs"></a>窗口 (標籤頁)
+## 窗口 (標籤頁)
 
     c 創建新窗口
     w 列出所有窗口
@@ -44,10 +46,10 @@
     swap-window -t 1 交換當前和 1 號窗口
     move-window -t 1 移動當前窗口到 1 號
 
-## <a name="PanesSplits"></a>窗格（分割窗口）
+## 窗格（分割窗口）
 
-    % 垂直分割
-    " 水平分割
+    | 垂直分割
+    _ 水平分割
     o 交換窗格
     x 關閉窗格
     ⍽ 左邊這個符號代表空格鍵 - 切換佈局
@@ -56,7 +58,7 @@
     } 與下一個窗格交換位置
     z 切換窗格最大化/最小化
 
-## <a name="syncPanes"></a>同步窗格
+## 同步窗格
 
 這麼做可以切換到想要的窗口，輸入 Tmux 前綴和一個冒號呼出命令提示行，然後輸入：
 
@@ -166,14 +168,14 @@ set -g history-limit 65535
 set -g base-index 1
 set -g pane-base-index 1
 
-# 前綴綁定 (Ctrl+a)
-set -g prefix ^a
+# 前綴綁定 (Ctrl+q)
+set -g prefix ^q
 unbind ^b
-bind a send-prefix
+bind q send-prefix
 
 # 分割窗口
 unbind '"'
-bind - splitw -v
+bind _ splitw -v
 unbind %
 bind | splitw -h
 
